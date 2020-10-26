@@ -1,0 +1,83 @@
+body {
+  margin: 0;
+}
+
+/* NAV */
+
+nav {
+  margin: 10px;
+  height: 50px;
+  background-color: pink;
+  font-size: 0;
+  text-align: center;
+  margin-bottom: 10px;
+  overflow: hidden;
+}
+
+nav span {
+  vertical-align: middle;
+  font-family: 'Montserrat', sans-serif;
+  display: inline-block;
+}
+
+nav span.lg {
+  font-size: 40px;
+  font-weight: 700;
+}
+
+nav span.sm {
+  font-size: 40px;
+  font-weight: 400;
+
+  --desired-width: 0px;
+  overflow-x: hidden;
+  transition-property: width, opacity;
+  transition-duration: 0.5s;
+  opacity: 0;
+}
+
+nav:hover .sm {
+  width: calc(var(--desired-width) * 1.2) !important;
+  opacity: 1;
+}
+
+
+/* BOX */
+
+div.box-container {
+  padding: 0 5px;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  /*align-content: center;*/
+}
+
+div.box {
+  vertical-align: middle;
+  font-weight: 400;
+  font-size: 25px;
+  text-align: center;
+  font-family: 'Montserrat', sans-serif;
+
+  padding: 5px;
+  min-width: 100px;
+  max-width: 250px;
+  margin: 0 5px 10px 5px;
+  height: 100px;
+  width: 100%;
+  flex: 1;
+  flex-grow: 1;
+  background-color: #9f9;
+
+  transition-property: box-shadow, bottom, background-color;
+  transition-duration: 0.2s;
+  position: relative;
+  bottom: 0px
+  /*box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.2);*/
+}
+
+div.box:hover {
+  bottom: 5px;
+  box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
+  background-color: #ccffcc;
+}
