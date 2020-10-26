@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <link rel='stylesheet' href='index.css'>
+    <link rel='stylesheet' href='nav.css'>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <meta name='description' content='An intro to HTML, CSS, JS and more, covering everything you need to get started.'>
+    <meta name='keywords' content='html hypertext markup css stylesheets js javascript pagerank web internet technology learn beginner basic intro'>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/4ebfdba722.js" crossorigin="anonymous"></script>
+    <title>JS</title>
+  </head>
+  <body>
+    <nav id='sidebar' data-hidden-parents='1'>
+      <ul>
+
+      </ul>
+    </nav>
+
+    <div id='main'>
+      <div id='nav-menu-container'></div>
+      <div id='intro'>
+        <h1>JS</h1>
+        <h3>JavaScript</h2>
+        </div>
+      <div id='content'>
+        <div class='format'>
+          JavaScript, or JS for short, is a scripting language commonly associated with providing interactivity in HTML pages.
+          ///
+          ///
+          It's typically used for interacting with the DOM (Document Object Model), or simply the elements on an HTML page. It is a weakly typed, dynamic language which leads it to be fairly easy to pick up. These do come at the cost of performance however.
+        </div>
+        <h3 id='getelementbyid' class='format'>getElementById method</h3>
+        <div class='format'>
+          In JavaScript, to interact, edit, store and retrieve data from elements, you need to first get a reference to the element. This can be done in many ways, but one is to call `document.getElementById()`.
+          ///
+          You pass the name of the element's ID (without the `#`), and it returns a reference to the element which you can store.
+```var mainDiv = document.getElementById('main-content');```
+        </div>
+        <h3 id='innerhtml' class='format'>innerHTML method</h3>
+        <div class='format'>
+          To change the content of whats inside an element, one method is to use the `innerHTML` attribute to set it to something new. This is a very bad idea, and in most cases you should avoid using this as it causes the entire page to re-calculate all the graphics.
+          ///
+          ///
+          If you wanted to add a `p` tag inside a div with ID `main-content`, you could do so:
+```var mainDiv = document.getElementById('main-content');
+
+mainDiv.innerHTML += '<\p>Here is my paragraph of text<\/p>';```
+        </div>
+        <h3 id='write' class='format'>write method</h3>
+        <div class='format'>
+          Another method to set content inside an element is to use the `write()` method. This overwrites any existing data, and so is very *very* rarely used anywhere except for testing.
+```var mainDiv = document.getElementById('main-content');
+
+mainDiv.write('<\p>Here is my paragraph of text<\/p>');```
+        </div>
+        <h3 id='alert' class='format'>alert function</h3>
+        <div class='format'>
+          The `alert()` function is something a little different to our previous examples. It doesn't change or manipulate elements in any way, rather it send a popup message to the user with some information.
+          ///
+          ///
+          You could for example let the user know that a file has finished downloading, or that an error has occured.
+```alert('This is the text that will appear in the popup');```
+        </div>
+      </div>
+    </div>
+
+    <script src='nav.js' charset="utf-8"></script>
+    <script src='toggleHide.js' charset='utf-8'></script>
+    <script src='shine.js' charset="utf-8"></script>
+    <script src='format.js' charset="utf-8"></script>
+  </body>
+</html>

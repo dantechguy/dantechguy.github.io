@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <link rel='stylesheet' href='index.css'>
+    <link rel='stylesheet' href='nav.css'>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <meta name='description' content='An intro to HTML, CSS, JS and more, covering everything you need to get started.'>
+    <meta name='keywords' content='html hypertext markup css stylesheets js javascript pagerank web internet technology learn beginner basic intro'>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/4ebfdba722.js" crossorigin="anonymous"></script>
+    <title>Search</title>
+  </head>
+  <body>
+    <nav id='sidebar' data-hidden-parents='1'>
+      <ul>
+
+      </ul>
+    </nav>
+
+    <div id='main'>
+      <div id='nav-menu-container'></div>
+      <div id='intro'>
+        <h1>Search</h1>
+        <h3>Details on search engines</h2>
+        </div>
+      <div id='content'>
+        <div class='format'>
+          Without search engines like Google *(please don't use Bing)*, the internet would be a very difficult place to get around. We would have to memorise or keep a list of all the website URLs to type into our web address bar!
+          ///
+          ///
+          Search engines circumvent this by providing the ability to look at a search term, and return a list of related websites it thinks we would want to see.
+        </div>
+        <h3 id='crawling' class='format'>Crawling</h3>
+        <div class='format'>
+          The concept of "crawling" initially sounds weird, but makes total sense once you get it! (It doesn't stop sounding weird though).
+          ///
+          ///
+          If we ourselves aren't able to keep a list of all the URLs on the internet, then how do search engines do it? In essense crawling consists of the following steps:
+        </div>
+        <ol>
+          <li>Look at a webpage we already have</li>
+          <li>Look for all of the URLs this webpage links to</li>
+          <li>Follow all of these links, and add these websites to our list</li>
+          <li>Repeat</li>
+        </ol>
+        <div class='format'>
+          It may seem a little tedious, but this is really how it works! Plus, search engines have robots to do this super fast and efficiently.
+        </div>
+        <h3 id='indexing' class='format'>Indexing</h3>
+        <div class='format'>
+          So what do search engines do once they've "found your website"? Before we said it gets "added to their list", but in reality its a little more technical.
+          ///
+          ///
+          Rather than adding to a list, a site is **indexed**, a little like pages in a book. A search engine's index can be massive, as it needs to store links to every website it can find!
+          ///
+          ///
+          If a search engine doesn't have a site indexed, it means it can't show it as a potential option to the users. This is why it's important to keep track of them all.
+        </div>
+        <h3 id='metatags' class='format'>Meta Tags</h3>
+        <div class='format'>
+          Once a search engine has found your site, it needs to read the content to decide what *the site is really all about*. This is crucial, because if a site is about horses, the engine has to know this to be able to show it to users looking for horses.
+          ///
+          ///
+          Web developers (people who make websites) can give search engines a little hand, by providing a series of `meta` tags. These are tidbits of info and keywords which can help clarify what the page is offering.
+```<\head>
+  <\meta name="description" content="Learn all about HTML, CSS, and JS here!">
+  <\meta name="keywords" content="cool website new education web click learn html css js">
+<\/head>```
+          They are always placed in the `head` element, and even though they can help a little, search engines have more intelligent ways of understanding pages now, so they rely on these tags less.
+        </div>
+        <h3 id='pagerank' class='format'>Page Rank</h3>
+        <div class='format'>
+          Page Rank, created by Larry Page, is an algorithm used by search engines to help determine quality of each of the hundreds of billions of websites, to help give you the best result.
+          ///
+          ///
+          Below is the formula used by the Page Rank algorithm, and a link to an in-depth PDF explaining how the entire system actually works.
+        </div>
+        <img src="pagerank.png" alt="The formula for the Page Rank algorithm">
+        <br>
+        <a href="pagerank-explained.pdf" target="_blank">Page Rank Explanation PDF</a>
+      </div>
+    </div>
+
+    <script src='nav.js' charset="utf-8"></script>
+    <script src='toggleHide.js' charset='utf-8'></script>
+    <script src='shine.js' charset="utf-8"></script>
+    <script src='format.js' charset="utf-8"></script>
+  </body>
+</html>

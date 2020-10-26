@@ -1,0 +1,196 @@
+html {
+  height: 100%;
+  --light-red: #F27059;
+  --red: #F25C54;
+  --orange: #F79D65;
+  --light-orange: #F7B267;
+  --gold: #F7E394;
+  --pale-yellow: #F7EDE3;
+  --nav-width: 250px;
+}
+
+body {
+  margin: 0;
+  height: 100%;
+  font-family: 'Montserrat', sans-serif;
+  font-weight: 300;
+  background-color: var(--pale-yellow);
+  overflow-x: hidden;
+}
+
+h1, h2, h3 {
+  color: var(--red);
+  margin: 0;
+}
+
+h1 {
+  padding: 20px 0;
+  font-size: 13vw;
+  /* font-size: 30vw; */
+}
+
+h2 {
+  margin: 60px 0 30px 0;
+  font-size: 8vw;
+}
+
+h3 {
+  font-size: 6vw;
+  margin: 60px 0 30px 0;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+#main {
+  width: 100%;
+  padding-bottom: 150px;
+}
+
+#intro {
+  margin: 0px auto 150px auto;
+  padding-top: 100px;
+  font-weight: 500;
+  width: 75vw;
+  max-width: 100%;
+  text-align: center;
+}
+
+#small-intro {
+  font-weight: 500;
+  text-shadow: 0px 3px 6px rgba(0, 0, 0, 0.15);
+}
+
+#large-intro {
+  text-shadow: 0px 9px 18px rgba(0, 0, 0, 0.25);
+}
+
+.center {
+  text-align: center;
+}
+
+#content {
+  font-size: 20px;
+  font-weight: 400;
+  padding: 0px 40px;
+  line-height: 30px;
+}
+
+#content ul {
+  padding: 0 0 0 25px;
+}
+
+#content li {
+  margin: 10px 0;
+}
+
+#content img {
+  margin: auto;
+  display: block;
+  max-width: 100%;
+  width: 500px;
+}
+
+#summary {
+  margin-bottom: 40px;
+  font-size: 20px;
+}
+
+/* #quick-boxes {
+  margin-bottom: 80px;
+} */
+
+.quick-box {
+  background-color: var(--light-orange);
+  padding: 20px;
+  border-radius: 10px;
+  margin: 20px 30px;
+  display: block;
+  color: inherit;
+  text-decoration: none;
+  font-size: 30px;
+  position: relative;
+  transition: bottom 0.2s, box-shadow 0.2s, transform 1s;
+  /* transform: rotate3d(0, 0, 0); */
+  bottom: 0px;
+}
+
+.quick-box:hover {
+  /* transform: rotate3d(var(--gradient-x), var(--gradient-y), 0, 45deg); */
+  box-shadow: 0px 6px 12px rgba(0, 0, 0, 0.3);
+  bottom: 5px;
+}
+
+.quick-box.shine:hover {
+  background-image: radial-gradient(circle at var(--gradient-x) var(--gradient-y), var(--gold), var(--light-orange) 150px);
+}
+
+code {
+  background-color: #eee;
+  border: 3px #fff solid;
+  border-radius: 5px;
+  color: #333;
+  padding: 2px;
+  border-radius: 3px;
+  font-weight: 100;
+  white-space: pre;
+}
+
+code.code-block {
+  display: block;
+  padding: 2px 5px;
+  margin: 10px 0px;
+  overflow-x: auto;
+}
+
+strong {
+  font-weight: 600;
+}
+
+u {
+  text-decoration: underline;
+}
+
+a {
+  color: var(--red);
+  position: relative;
+  transition: color 0.2s;
+}
+
+a:hover {
+  color: var(--orange);
+}
+
+@media only screen and (min-width: 768px) {
+  #main {
+    margin-left: var(--nav-width);
+    width: calc(100vw - var(--nav-width));
+  }
+
+  #intro {
+    width: 45vw;
+    max-width: 100%;
+  }
+
+  h1 {
+    font-size: 8vw !important;
+  }
+
+  h2 {
+    font-size: 5vw !important;
+  }
+
+  h3 {
+    font-size: 3vw !important;
+  }
+
+  .quick-box {
+    width: 200px;
+    display: inline-block;
+  }
+
+  #content {
+    padding: 0px 80px;
+  }
+}

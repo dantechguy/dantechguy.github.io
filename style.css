@@ -52,7 +52,7 @@ div.box-container {
   /*align-content: center;*/
 }
 
-div.box {
+a.box {
   vertical-align: middle;
   font-weight: 400;
   font-size: 25px;
@@ -72,12 +72,15 @@ div.box {
   transition-property: box-shadow, bottom, background-color;
   transition-duration: 0.2s;
   position: relative;
-  bottom: 0px
+  bottom: 0px;
   /*box-shadow: 0 0px 0px 0px rgba(0, 0, 0, 0.2);*/
+
+  text-decoration: none;
+  color: black;
 }
 
-div.box:hover {
+a.box:hover {
   bottom: 5px;
   box-shadow: 0 5px 10px 0px rgba(0, 0, 0, 0.2);
-  background-color: #ccffcc;
+  background-color: #bfb;
 }

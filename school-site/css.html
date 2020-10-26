@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <link rel='stylesheet' href='index.css'>
+    <link rel='stylesheet' href='nav.css'>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <meta name='description' content='An intro to HTML, CSS, JS and more, covering everything you need to get started.'>
+    <meta name='keywords' content='html hypertext markup css stylesheets js javascript pagerank web internet technology learn beginner basic intro'>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/4ebfdba722.js" crossorigin="anonymous"></script>
+    <title>CSS</title>
+  </head>
+  <body>
+    <nav id='sidebar' data-hidden-parents='1'>
+      <ul>
+
+      </ul>
+    </nav>
+
+    <div id='main'>
+      <div id='nav-menu-container'></div>
+      <div id='intro'>
+        <h1>CSS</h1>
+        <h3>Cascading Style Sheets</h2>
+        </div>
+      <div id='content'>
+        <div class='format'>
+          CSS, short for Cascading Style Sheets, is a way of changing the way HTML files look. Maybe by giving certain text a different colour, or changing the background colour. *Cascading* is just a fancy term for the way CSS prioritises which styles to apply to each element.
+          ///
+          ///
+          The basic structure of CSS is as follows:
+        </div>
+        <ol>
+          <li>A "selector", which specifies which element(s) to target</li>
+          <li class='format'>A "property", which is what *aspect* of the element you target</li>
+          <li>A "value" for the property, to tell it what to change it to</li>
+          <li>The property and value together form a "declaration"</li>
+        </ol>
+        <div class='format'>
+          ///
+          ///
+          ***So what do these things even look like?***
+          ///
+          ///
+          Glad you asked! Heres the syntax for writing a CSS statement:
+```selector {
+  property: value;
+  property: value;
+  property: value;
+  ...
+}```
+          We begin a CSS rule with the selector, as shown. Then follows curly braces (`{}`), and everything *after* the selector *inside* the braces, is a rule applied the selected element.
+          ///
+          ///
+          Each property is defined by name, followed by a colon (`:`), the value of the property, and finally a semicolon (`;`) to finish the statement. You can have as many statements as you like.
+          ///
+          ///
+          An example of a property, could be `font-size`, which determines how big the text is. And you set the value to `20px` big if you wanted.
+          ///
+          ///
+          One thing to note, terms like "colour" in CSS are spelt `color` for American standardisation. I hate it as much as you do.
+        </div>
+        <h2>Selectors</h2>
+        <h3 id='element' class='format'>Element selector</h3>
+        <div class='format'>
+          The first way to select an element, is simply to choose all elements of a specific type. It could be all `div`s, or all `img`s, or anything!
+```div {
+  property: value;
+}```
+          This allows you to set properties which should always be applied to every instance of an element, maybe say you wanted all Headings (`h`) to be red.
+        </div>
+        <h3 id='id' class='format'>ID selector</h3>
+        <div class='format'>
+          An important aspect in HTML is the ability to add attributes, and one such attribute called `id` is very important.
+          ///
+          ///
+          By assigning an element the `id` attribute, and giving it an ID name (this *has* to be unique), we can choose that element specifically.
+          ///
+          ///
+          To select an element with an ID, we use a `#` followed by the ID value. We would create the element like so:
+```<\div id="main-content">
+  This is the main content!
+<\/div>```
+          And then select that element in CSS like this:
+```#main-content {
+  property: value;
+}```
+        </div>
+        <h3 id='class' class='format'>Class selector</h3>
+        <div class='format'>
+          Similar to how we can assign elements `id`s, we can also assign them an attribute called `class`! The difference is, is that multiple elements can have the same class.
+          ///
+          ///
+          This lets us select specific elements, without them necessarily having to be of the same type! One element can have multiple classes, each one separated by a space. To select a class, use a `.`, followed by the class name.
+          ///
+          ///
+          We could create elements with classes like so:
+```<\p class="red-text green-background">
+  I am a Paragraph element, with funny colours!
+<\/p>
+<\div class="red-text">
+  I am a Div element, with red text!
+<\/div>```
+          And then apply CSS like so:
+```.red-text {
+  property: value;
+}
+.green-background {
+  property: value;
+}```
+        </div>
+        <h2>Properties</h2>
+        <h3 id='background-color' class='format'>Background-color property</h3>
+        <div class='format'>
+          Tired of seeing plain old white backgrounds? You can spice up the colours with the `background-color` property:
+```.green-background: {
+  background-color: green;
+}```
+          There are three different ways to specify colours in CSS. Firstly, by using a handful of pre-defined colour words, such as the `green` above. Secondly, by using a hex value like `#00ff00`. Lastly, you can use `rgb(0, 255, 0)`, or `rgba(0, 255, 0, 255)` (for transparency).
+        </div>
+        <h3 id='border-color' class='format'>Border-color property</h3>
+        <div class='format'>
+          If you want to add a fancy little border around an element to maybe make it stand out, then using `border`s is the way to go. To choose a colour, simply use the `border-color` property:
+```.red-border {
+  border-color: red;
+  ... other border properties ...
+}```
+          For a fully defined border you will need other properties too, see below.
+        </div>
+        <h3 id='border-width' class='format'>Border-width property</h3>
+        <div class='format'>
+          Along with the colour of the border, you also need to tell CSS how thick to make the line. Using `border-width` allows you to make your borders and thin or chunky as your heart desires!
+```.chunky-border {
+  border-width: 10px;
+  ... other border properties ...
+}```
+        </div>
+        <h3 id='color' class='format'>Color property</h3>
+        <div class='format'>
+          This property is exciting! It lets us change the colour of the text. Simply use the `color` attribute and pass in a colour using one of the three colour input methods.
+```.blue-text {
+  color: blue;
+}```
+        </div>
+        <h3 id='font-family' class='format'>Font-family property</h3>
+        <div class='format'>
+        Maybe you're getting a little bored of seeing the same Times New Roman font everywhere in your HTML? I sure am. You can pick a different one using `font-family`, although be careful since this one has a few extra options.
+```.nice-font {
+  font-family: Arial, "Comic Sans MS", sans-serif;
+}```
+          "Huh?!" I hear you say. Why are there multiple values? Some CSS properties take more than one value when being defined, but its not as complicated as you may think in this case.
+          ///
+          ///
+          Simply put, reading from left to right, this is the order of fonts that the browser tries to display. If it doesn't find one, it tries the next one in the list.
+          ///
+          ///
+          So then.. what's "sans-serif"? Thats not a font? **Correct**. Sans serif isn't a font, but rather a generic family of fonts. There are a few pre-defined values for these "generic fonts", and they are used as a last resort if all other fonts fail.
+          ///
+          ///
+          This is safe, as the browser doesn't necessarily have to choose any single font, it can look through the currently installed ones, and pick one which matches.
+        </div>
+        <h3 id='font-size' class='format'>Font-size property</h3>
+        <div class='format'>
+          This one is easy. How big do you want your text? Thats what `font-size` does.
+```big-text {
+  font-size: 50px;
+}```
+        </div>
+        <h3 id='height' class='format'>Height property</h3>
+        <div class='format'>
+          Imagine you have a beautiful layout, with an image that really matches the aesthetic you're going for. But, *its too small!!* The CSS `height` property changes the height of any element, and if left empty defaults to `auto`.
+```.tall-image {
+  height: 200px;
+}```
+        </div>
+        <h3 id='width' class='format'>Width</h3>
+        <div class='format'>
+          By default, some elements take up the entire width they're given, which can be super annoying! If you wanted to keep an element at a specific width, maybe smaller or bigger than it defaults to, then you use the `width` property.
+```.fairly-thin-paragraph {
+  width: 100px;
+}```
+        </div>
+      </div>
+    </div>
+
+    <script src='nav.js' charset="utf-8"></script>
+    <script src='toggleHide.js' charset='utf-8'></script>
+    <script src='shine.js' charset="utf-8"></script>
+    <script src='format.js' charset="utf-8"></script>
+  </body>
+</html>

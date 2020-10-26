@@ -1,0 +1,342 @@
+<!DOCTYPE html>
+<html lang='en' dir='ltr'>
+  <head>
+    <meta charset='utf-8'>
+    <meta name='viewport' content='width=device-width, initial-scale=1, shrink-to-fit=no'>
+    <link rel='stylesheet' href='index.css'>
+    <link rel='stylesheet' href='nav.css'>
+    <link rel="shortcut icon" href="favicon.ico"/>
+    <meta name='description' content='An intro to HTML, CSS, JS and more, covering everything you need to get started.'>
+    <meta name='keywords' content='html hypertext markup css stylesheets js javascript pagerank web internet technology learn beginner basic intro'>
+    <link href='https://fonts.googleapis.com/css2?family=Montserrat:wght@100;200;300;400;500;600;700;800;900&family=Yeseva+One&display=swap' rel='stylesheet'>
+    <script src="https://kit.fontawesome.com/4ebfdba722.js" crossorigin="anonymous"></script>
+    <title>HTML</title>
+  </head>
+  <body>
+    <nav id='sidebar' data-hidden-parents='1'>
+      <ul>
+
+      </ul>
+    </nav>
+
+    <div id='main'>
+      <div id='nav-menu-container'></div>
+      <div id='intro'>
+        <h1>HTML</h1>
+        <h3>Hyper Text Markup Lanuage</h2>
+        </div>
+      <div id='content'>
+        <div class='format'>
+          HTML, short for Hyper Text Markup Language, is just like any other file you've come across before. No different from `.txt` or `.docx`. It's just another way of storing text in a file!
+          ///
+          ///
+          There are some key differences though:
+        </div>
+        <ul>
+          <li>The text is split into groups, called "elements"</li>
+          <li>There are different elements, for different types of groups</li>
+          <li>An element is started and ended by "tags"</li>
+          <li>HTML files can be "styled", to make look differently</li>
+          <li>HTML files can have code attached</li>
+        </ul>
+        <div class='format'>
+
+          ***So what do tags look like?***
+          ///
+          ///
+          Tags come in all sorts of shapes and sizes, but the one thing they all have in common is that they start with `<\`, and end with `>`. Anything inbetween those two contains information about the tag. Check out this example:
+```<\section>
+  This is some text, inbetween two tags.
+<\/section>```
+          So you can see we have two tags here, and they look pretty similar, except for the fact one has a mysterious `/` in it. Tags on their own aren't very helpful, but when you combine two tags, an *opening* and a *closing* tag, you create an **element**.
+          ///
+          ///
+          The `/` at the start means that this tag is an *closing* tag, so if you look at the example, you can see that we first have the opening tag to say "Hey! Stuff below me is inside this element", and a closing tag to say "Hey! The element from above stops here".
+          ///
+          ///
+          The result of the above HTML, is that we create an **element**, of type "section". Sections are used to split up your content into meaningful... uh.. *sections*. The "section" in this case, is the element's "type".
+          ///
+          ///
+          ***What if I need to give additional info?***
+          ///
+          ///
+          If the element you are using needs to be given some extra information to function properly, for example an image needs to know *which* picture to show, then this is done though **attributes**.
+          ///
+          ///
+          Attributes are defined as "key - value" pairs, essentially meaning one "key" corresponds to one piece of information, or a "value". They are always written *in* the **opening** tag, separated by **spaces**, after the tag **name**, with keys and values linked by an **equals** sign (`=`), and values being enclosed in **quotation marks** (`"`):
+```<\section key="value" data-attribute="some info">
+  Your normal text. Only this is visible.
+<\/section>```
+        </div>
+        <h3 id='html' class='format'><\html> tag</h3>
+        <div class='format'>
+          The `html` tag is very important, as all HTML files are *always* contained within one `html` element. Take a look at the example below:
+```<\html>
+  Anything could be here, from text to other elements.
+<\/html>```
+          We only need one `html` element in our file, and it is always surrounding everything else.
+        </div>
+        <h3 id='head' class='format'><\head> tag</h3>
+        <div class='format'>
+          The second tag you'll find in every HTML file, is the `head` tag. This element is where you put information *about* your file, stuff that the viewer won't explicity see.
+```<\html>
+  <\head>
+    Specific elements are placed here to provide more information about the file.
+  <\/head>
+<\/html>```
+          See that we've placed it inside the `html` element, as all other elements are all included inside it.
+        </div>
+        <h3 id='title' class='format'><\title> tag</h3>
+        <div class='format'>
+          This is a tag which is really important, but is often overlooked when you first start. It always goes inside the `head` tag, as the `title` tag provides the main name for the page.
+          ///
+          ///
+          You won't see its effects anywhere within the page, but if you look at the top of your browser and look at the current tab, you'll see a little name. *This*, is what the `title` tag controls, and is important to get right as people will be reading this when looking for which tab to click on.
+```<\html>
+  <\head>
+    <\title>My website!<\title>
+  <\/head>
+<\/html>```
+          As the element provides information about the page which *doesn't* go inside the page, we always place it in the `head` element.
+          ///
+          ///
+          You can also see that the closing tag is on the same line as the opening tag. HTML doesn't care how many lines down you place it, as it always removes any extra line-breaks or spaces automatically. But it **cannot** be above, as then there is no inbetween between the opening and closing tags for the element to be made.
+        </div>
+        <h3 id='link' class='format'><\link> tag</h3>
+        <div class='format'>
+          You'll probably get to use this tag more once you get the hang of using HTML. The `link` tag allows you pull in (and create a link between) other external resources.
+          ///
+          ///
+          In simple terms, this means we can write data in another file, `link` it from another file, and then use the written data inside the other file! Crazy!
+```<\html>
+  <\head>
+    <\link rel='stylesheet' href='/index.css'>
+  <\/head>
+<\/html>```
+          Again, in this case the element provides no visible content, so it goes in the `head` element. *However*, that isn't to say it can never go in the main content. (Read two paragraphs down).
+          ///
+          ///
+          This element has a few unique properties that we're yet to see. Firstly, *it has no closing tag!* Not to worry though, since as this element cannot have any content inside, we don't need to specify when it ends, since there will never be an data inbetween anyway!
+          ///
+          ///
+          And secondly, it makes use of **attributes** for the first time. There are many different attributes this element can have, and some of them display visible content, therefore depending on which attributes you use will determine where you place it.
+          ///
+          ///
+          The `rel` attribute, with value `stylesheet`, tells us the `rel`ationship between the linked file and this file. The `href` attribute, with value `/index.css`, tells us *where* the file we want to link is. We write in a URL (uniform resource locator) to the file we want. The `href` attribute is used in many other elements where they need to get information from other files.
+          ///
+          ///
+          So in summary, this element creates a link between the file `/index.css`, allowing us to use its data in this file.
+        </div>
+        <h3 id='body' class='format'><\body> tag</h3>
+        <div class='format'>
+          You've probably had enough of this "non-visible content" shenanigans by now, so *this* is the point where we start making things appear on screen!
+          ///
+          ///
+          The `body` tag is the second largest element (aside from `html`), and all visible content we have goes inside here. Just like `head` was for information *not* visible to the user, body is for information which *will* be visible.
+```<\html>
+  <\head>
+    ...
+  <\/head>
+  <\body>
+    All of our main content goes here!
+  <\/body>
+<\/html>```
+          The body tag is a must have, as **all** data and content the user will interact with must go inside.
+        </div>
+        <h3 id='h1h6' class='format'><\h1> .. <\h6> tag</h3>
+        <div class='format'>
+          This isn't just one tag.. no. This is *six*, individual tags which are all very closely related. We have `h1`, `h2`, `h3`, `h4`, `h5` and `h6`.
+          ///
+          ///
+          The `h` tags, or "heading" tags serve one purpose. To show, *you guessed it*, headings! The lower the number, the more important it is.
+          ///
+          ///
+          You could think of `h1` as the main title to you file, with `h2` being your large section "sub-headings", `h3` as "sub-sub-headings"...  you get the picture.
+```<\html>
+  <\body>
+    <\h1>My awesome website!<\/h1>
+
+    <\h2>Introduction<\/h2>
+
+    <\h2>All about me<\/h2>
+
+  <\/body>
+<\/html>```
+          As the `h` tags are used for headings, the text inside should usually not be too long. No one wants a long title!
+        </div>
+        <h3 id='img' class='format'><\img> tag</h3>
+        <div class='format'>
+          Perhaps the most exciting of all the tags so far, the `img` element allows you to show images inside your file!
+```<\html>
+  <\body>
+    <\img src="beach.jpg" alt="Picture of the beach" width="100" height="50">
+  <\/body>
+<\/html>```
+          This tag is similar to `link`, in that it doesn't have a closing tag, and that all of the information is stored via attributes.
+          ///
+          ///
+          The `src` attribute, with value `beach.jpg`, contains the URL to the source image we want to show. Now `alt`, with value `Picture of the beach`, may seem a little odd, but is very important. For visually impaired people, and for robots scanning your page (both of which can't see your picture), the `alt` tag gives a quick summary of what the picture contains.
+          ///
+          ///
+          To determine the size of our image, we can use the `width` and `height` attributes. In this case, my picture is `100x50` pixels large.
+        </div>
+        <h3 id='a' class='format'><\a> tag</h3>
+        <div class='format'>
+          The `a` tag, used for creating **hyperlinks**, is single-handedly what made the internet as impressive as it is today. This element creates a clickable link which can take us to another file, or page.
+```<\html>
+  <\body>
+    <\a href="https://instagram.com/username">Check out my Instagram!<\/a>
+  <\/body>
+<\/html>```
+          The `a` tag's contents are the text you want to be clicked on, and the `href` tag is the URL you want the user to go to once clicked.
+        </div>
+        <h3 id='div' class='format'><\div> tag</h3>
+        <div class='format'>
+          This is probably the most versatile element of them all, as the purpose of `div` is to be a generic container for whatever content needs to be separated.
+```<\html>
+  <\body>
+    <\div>
+      Information about one topic
+      <\div>
+      More specific information about this topic
+      <\/div>
+    <\/div>
+    <\div>
+      Information about a different topic
+    <\/div>
+  <\/body>
+<\/html>```
+          As you can see, you can place `div` elements inside other `div` elements. This isn't only true for these though, as every element that accepts content of some form, can contain other elements.
+        </div>
+        <h3 id='form' class='format'><\form> tag</h3>
+        <div class='format'>
+          The `form` element isn't used too frequently, but it does serve a useful purpose. This element is a container for other form elements, which are used to collect user input.
+```<\html>
+  <\body>
+    <\form action="index.html" method="post">
+      ... other form elements ...
+    <\/form>
+  <\/body>
+<\/html>```
+          The form element isn't useful on its own, but when specific elements inside are included is its true functionality present.
+          ///
+          ///
+          This form's attributes are a little difficult to understand now, but to give an overview: `action` is the page to submit the form's data *to*, and `method` is *how* you do that. The details aren't important at the moment however.
+        </div>
+        <h3 id='input' class='format'><\input> tag</h3>
+        <div class='format'>
+          The `input` element is used to collect user input in a wide variety of ways, and is also used by the `form` element.
+```<\html>
+  <\body>
+    <\form action="index.html" method="post">
+      <\input type="text" name="firstname" value="Dan" placeholder="First name">
+    <\/form>
+  <\/body>
+<\/html>```
+          The input element is highly changeable, and the *type* of input depends on the `type` attribute. In this case, it is `text`, which means that the user can type into a textbox. To specify the name, used to identity the input, use the `name` attribute.
+          ///
+          ///
+          To set a default value, use the `value` attribute, and for there to be displayed faint, greyed out prompt text, used the `placeholder` attribute.
+          ///
+          ///
+        </div>
+        <a href="https://developer.mozilla.org/en-US/docs/Web/HTML/Element/input">Link to all input attributes</a>
+        <h3 id='p' class='format'><\p> tag</h3>
+        <div class='format'>
+          Up until know, you've seen text written haphazardly within elements, however in a traditionally structured HTML file, the go-to element is the `p` tag.
+```<\html>
+  <\body>
+    <\p>
+      Here is a sentence.
+    <\/p>
+    <\p>
+      The things you write in these can be as long or short as you like, there really are no rules.
+    <\/p>
+  <\/body>
+<\/html>```
+           Use it for generic blocks of text, thats about it!
+        </div>
+        <h3 id='ol' class='format'><\ol> tag</h3>
+        <div class='format'>
+          So what happens when you want to make a list, say you were writing a recipe with numbered instructions? Ordered List to the rescue! By using the `ol` element as the container, you can place list item elements inside for each item!
+```<\html>
+  <\body>
+    <\ol>
+      ... list data elements go here ...
+    <\/ol>
+  <\/body>
+<\/html>```
+           The thing that makes these special is that they automatically add numbers to each item, so when you re-order your items theres no need to update the numbers too. Clever ain't it?
+        </div>
+        <h3 id='ul' class='format'><\ul> tag</h3>
+        <div class='format'>
+          Okay, but what if you need a list which *isn't* ordered, say just a series of bullet points? Well say no more since Unordered List is just the element you need. The `ul` tag makes it as easy as possible.
+```<\html>
+  <\body>
+    <\ul>
+      ... list data elements go here ...
+    <\/ul>
+  <\/body>
+<\/html>```
+           Each item is automatically given a bullet point, to save you from copying and pasting those pesky unicode characters everywhere.
+        </div>
+        <h3 id='li' class='format'><\li> tag</h3>
+        <div class='format'>
+          Now we've covered two different types of lists, so now we need something to go inside. The List Item element, or `li` tag, is the *only* element that can be directly inside an `ol` or `ul`.
+```<\html>
+  <\body>
+    <\ul>
+      <\li>Cats<\/li>
+      <\li>Tigers<\/li>
+      <\li>Lions<\/li>
+    <\/ul>
+    <\ol>
+      <\li>Buy food<\/li>
+      <\li>Drive home<\/li>
+      <\li>Cook food<\/li>
+    <\/ol>
+  <\/body>
+<\/html>```
+           The `ul` in the example contains a series of `li`s, but since the items have no order, the Unordered List gives each one a bullet point.
+           ///
+           ///
+           The `ol` however, has a series of instructions, and will give each one a number (from 1 to 3).
+        </div>
+        <h3 id='script' class='format'><\script> tag</h3>
+        <div class='format'>
+          The `script` tag is used for writing JavaScript code. It can be used in two different ways, and can be placed in two different places.
+          ///
+          ///
+          It can either *contain* code inside (which isn't shown to the user), or load in another file containing JavaScript code.
+```<\html>
+  <\head>
+    <\script src="/index.js" charset="utf-8"><\/script>
+  <\/head>
+  <\body>
+      ... Other Content ...
+    <\script src="/index.js" charset="utf-8"><\/script>
+    <\script type="text/javascript">
+      ... JavaScript code goes here ...
+      <\/script>
+  <\/body>
+<\/html>```
+           Script elements can either be placed in the `head` element, or typically at the bottom of the `body` element, but it really depends on *when* you need the code to be run.
+           ///
+           ///
+           Code which should be run first, should be placed `head`, and code which should be run after all other elements have been created should be placed in the bottom (of the `body`).
+           ///
+           ///
+           The `src` attribute is the URL to the external file to be loaded and executed, but if you're writing the code directly inside the tag then you don't need this. To tell the browser which character encoding the external file uses, specify this with `charset`.
+           ///
+           ///
+           If you are writing directly into the element, then use the `type` attribute to tell the browser what sort of content you are writing (which will be `text/javascript`).
+        </div>
+      </div>
+    </div>
+
+    <script src='nav.js' charset="utf-8"></script>
+    <script src='toggleHide.js' charset='utf-8'></script>
+    <script src='shine.js' charset="utf-8"></script>
+    <script src='format.js' charset="utf-8"></script>
+  </body>
+</html>
