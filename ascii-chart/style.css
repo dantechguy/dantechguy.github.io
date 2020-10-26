@@ -1,0 +1,21 @@
+body {
+  margin: 0;
+  background: #ccc;
+}
+
+canvas {
+  background: #fff;
+}
+
+#output {
+    overflow: hidden;
+    margin: 0;
+    white-space: pre;
+    resize: none;
+    height: 15px;
+    width: 80px;
+}
+
+input {
+    width: 80px;
+}
