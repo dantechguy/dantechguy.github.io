@@ -1,0 +1,9 @@
+stack equal cards
+
+move cards into empty piles
+
+not move cards that are visible, unless necessary
+
+
+
+you should only move recently uncovered cards (so not to disrupt players memory of card placements)

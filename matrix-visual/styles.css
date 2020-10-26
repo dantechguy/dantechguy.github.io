@@ -1,0 +1,46 @@
+body {
+  background-color: #fff;
+  text-align: center;
+}
+
+canvas {
+  background-color: #fff;
+  box-shadow: 0 0 5px #aaa;
+}
+
+
+.matrix {
+  display: inline-block;
+  box-shadow: 0 0 5px #aaa;
+  margin: 10px;
+}
+
+.matrix-row {
+  font-size: 0;
+  margin: 5px;
+  padding: 5px;
+}
+
+.matrix-cell {
+  display: inline-block;
+  padding: 5px;
+}
+
+.matrix-input {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+  font-size: 15px;
+  display: block;
+}
+
+.matrix-range {
+  padding: 0;
+  margin: 0;
+  display: block;
+}
+
+.matrix-cell, .matrix-input, .matrix-range {
+  width: 100px;
+  height: 20px;
+}

@@ -1,0 +1,15 @@
+body {
+  background-color: #bbb;  
+}
+
+#topRow, #bottomRow {
+  height: 300px;
+}
+
+#middleRow {
+  height: 400px;
+}
+
+.row {
+  vertical-align: middle;
+}

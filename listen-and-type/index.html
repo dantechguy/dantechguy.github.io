@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>write and read</title>
+  <link rel="stylesheet" type="text/css" href="index.css">
+  <link href="https://fonts.googleapis.com/css?family=Inconsolata" rel="stylesheet">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+<body>
+
+
+  <span class="box">
+    URL: <input type="text" id="url-input">
+    <input type="button" value="Load" onclick="loadUrl()">
+  </span>
+
+  <span class="box">
+    Sentence number: <input type="text" id="line-input" value="0">
+    <input type="button" value="Speak" onclick="speak()">
+  </span>
+
+  <span class="box">
+    Sentence separator: <input type="text" id="sentence-separator" value=". ">
+  </span>
+
+  <div id="input-box">
+    <input id="text-input" type="text" placeholder="Type what you hear..">
+  </div>
+
+
+<script src="http://code.responsivevoice.org/responsivevoice.js"></script>
+<script src="index.js"></script>
+</body>
+</html>

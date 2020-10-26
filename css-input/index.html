@@ -1,0 +1,91 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>input as css</title>
+  <link rel="stylesheet" type="text/css" href="style.css">
+  <link href="https://fonts.googleapis.com/css?family=VT323" rel="stylesheet">
+</head>
+
+<body>
+
+<div>
+  <textarea style='resize:none;' spellcheck='false' type="textarea" id='input' oninput='updateCss();'></textarea>
+</div>
+
+<script type="text/javascript" src="https://cdn.jsdelivr.net/npm/typeit@6.0.2/dist/typeit.min.js"></script>
+
+<script type="text/javascript">
+  typer = new TypeIt('#input', {
+    speed: 50,
+    startDelay: 2000,
+    afterStep: function(step, queue, instance) {
+      updateCss();
+    }
+  })
+  .type('/* hey')
+  .pause(800)
+  .type(', yeah you.')
+  .pause(800)
+  .type('\nwelcome to my site!')
+  .pause(800)
+  .type('\nits not looking too good at the moment')
+  .pause(800)
+  .type(', give me a sec and i\'ll fix it up */')
+  .pause(3000)
+  .options({speed:50})
+  .type(`\n\n* {
+  transition-duration:2s;
+}
+
+textarea {
+  height: 500px;
+  width: 500px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-color: #fff;
+  border: none;
+  padding: 10px;
+  position: absolute;
+  right: 0;
+  margin: 40px;
+  color: #bbb;
+  background-color: #333;
+  border-radius: 10px;
+  transform: perspective(400px) rotateY(-10deg);
+}
+
+body {
+  background-color: #777;
+  margin:0
+}`)
+  .options({speed:50})
+  .pause(2000)
+  .type('\n\n/* ah thats better,')
+  .pause(300)
+  .type('\nmore spacious now. */')
+  .go();
+</script>
+
+<script type="text/javascript">
+
+var input = document.querySelector('#input');
+var head = document.head;
+var styleDom = document.createElement('style');
+styleDom.type = 'text/css';
+head.appendChild(styleDom);
+
+function removeAllChildren(selector) {
+  var myNode = document.querySelector(selector);
+  while (myNode.firstChild) {
+    myNode.removeChild(myNode.firstChild);
+  };
+}
+
+function updateCss() {
+  let css = input.value;
+  removeAllChildren('style');
+  styleDom.appendChild(document.createTextNode(css));
+};
+
+</script>
+</body>
+</html>

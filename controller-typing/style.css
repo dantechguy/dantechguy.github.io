@@ -1,0 +1,43 @@
+* {
+  font-family: consolas, monospace;
+}
+section {
+  font-size: 0;
+}
+
+.row, .cell {
+  height: 50px;
+}
+
+.row {
+  width: 150px;
+}
+
+.cell {
+  vertical-align:top;
+  text-align: center;
+  font-size: 40px;
+  width: 50px;
+  display: inline-block;
+}
+
+.button {
+  background-color: black;
+  border-radius: 50%;
+}
+
+.yellow {
+  color: yellow;
+}
+
+.blue {
+  color: blue;
+}
+
+.red {
+  color: red;
+}
+
+.green {
+  color: green;
+}
