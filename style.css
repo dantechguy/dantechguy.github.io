@@ -59,11 +59,11 @@ a.box {
   text-align: center;
   font-family: 'Montserrat', sans-serif;
 
-  padding: 5px;
-  min-width: 100px;
-  max-width: 250px;
+  padding: 10px;
+  min-width: max-content;
+  max-width: 300px;
   margin: 0 5px 10px 5px;
-  height: 100px;
+  height: 35px;
   width: 100%;
   flex: 1;
   flex-grow: 1;
