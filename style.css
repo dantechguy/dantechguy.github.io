@@ -37,7 +37,7 @@ nav span.sm {
 }
 
 nav:hover .sm {
-  width: calc(var(--desired-width) * 1.2) !important;
+  width: var(--desired-width) !important;
   opacity: 1;
 }
 
