@@ -1,12 +1,3 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Dan's Personal Statement</title>
-</head>
-<body>
 Inspired by my research during industry work and countless home projects, computer science drives me in its fusion of creative problem solving, critical thinking and technology. Awarded the Arkwright Engineering Scholarship for computer science, I have enjoyed the opportunities it has provided, and look forward to sharing my enthusiasm for my chosen subject as a future engineer.
 
 Of my numerous projects, I am especially proud of my NodeJS global multiplayer web game. Now in its second iteration, I have learnt the importance of modularity, API encapsulation and clean network logic. Having redeveloped an older project using these skills, by separating core modules into libraries, I appreciate the role of abstraction within complex systems. In another project, to support students in transferring their programming skills from Scratch, I developed a Python library with familiar syntax and transpiler. The engine abstracted graphics and event-handling, and focused on teaching object-orientation by extending the students’ existing skills. More recently, my summer preparation has involved extensive research into the Android and Universal Windows Platform APIs, which when combined with knowledge from a government cyber security course, has helped me design an AES and RSA based network protocol. Research into networking resumed during a recent internship, where my ability in Python, Docker and Linux was recognised by senior management when I presented my research on Natural Language Processing (NLP). As a result, my team received further funding to fully utilise NLP. I have thrived on these opportunities to communicate complex topics in an easily understood manner, alongside using other crucial skills identified in ‘Clean Code’ by Robert Martin. An example is my Computer Science coursework to develop a wireless PC controlling app, where I worked with five industry professionals as clients and utilised Martin’s best practices.
@@ -16,5 +7,3 @@ My other A Level subjects also support my application. Mathematics has given me 
 While now utilised for software development, my teamwork and leadership skills have been honed during my Scouting career, in which I have led expedition teams and represented both England and Norway (being fluent in Norwegian) in the prestigious World Scout Jamboree. To raise nearly £4000, I developed software for several community events and sold artwork in local shops. This has sharpened my intuition for problem decomposition when faced with substantial challenges.
 
 As well as developing a more holistic understanding of computers during my computer science degree, I look forward to further enhancing my skills as an engineer and solving challenging problems with my creativity, ingenuity and contagious enthusiasm.
-</body>
-</html>
