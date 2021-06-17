@@ -1,0 +1,18 @@
+<html>
+<script>
+let links = {
+    'nea': 'https://drive.google.com/file/d/1Yz_Qhzex6bfhm0iVNMw_BQ835W38tJQn/view',
+    'books': 'https://drive.google.com/drive/folders/1Y6VxpKgs7RfyP7-3VaGsRJoHndZRlez2',
+    'ps': 'https://drive.google.com/file/d/1RdYPdwFRNgN0Nv9U_nH-bbIaogQNd9-9/view',
+    'cv': 'https://drive.google.com/file/d/1g_nm9JhmzhXNDUoMi1jM7I0O5gxliqqS/view',
+    'lifts': 'https://docs.google.com/spreadsheets/d/e/2PACX-1vS-ZbMJvPJbdtr-3T5G3DwAdbOwXtZ46NBnLXGSuGxqytj-tAFeXqv9kT9Q1ZRGR-c5oV6R0AsarHlW/pubhtml',
+    'quizlet': 'https://quizlet.com/DanTechGuy/folders/ocr-computer-science-a-level'
+}
+if (location.search.startsWith('?')) {
+    let link = location.search.substring(1)
+    if (links.hasOwnProperty(link))
+        location.href = links[link]
+}
+</script>
+That's an invalid link!
+</html>

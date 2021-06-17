@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css">
+    
+    <script src="https://cdn.jsdelivr.net/npm/marked/marked.min.js"></script>
+    
+    <link rel="stylesheet" href="github.min.css">
+    <script src="highlight.min.js"></script>
+    
+    
+    <title>Loading...</title>
+</head>
+<body>
+    <div id='content'>
+        Loading...
+    </div>
+<script>
+function getPage(page) {
+    fetch(`${page}.md`)
+    .then(res => {
+        if (res.ok)
+            return res.text()
+        else if (res.status === 404)
+            getPageError('That page doesn\'t exist');
+        else
+            getPageError('There was a server error trying to load the page :/');
+    })
+    .then(text => {
+        document.getElementById('content').innerHTML = marked(text)
+        hljs.highlightAll();
+    })
+    .catch(err => getPageError('There was a network error trying to load the page :/'))
+}
+
+function getPageError(err) {
+    alert(`${err} - refresh the page to try again.`)
+}
+
+if (url = location.search.substring(1))
+    getPage(url);
+</script>
+</body>
+</html>
